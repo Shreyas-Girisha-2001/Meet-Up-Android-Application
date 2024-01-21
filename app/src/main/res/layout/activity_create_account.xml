@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".createAccount">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Account"
+        android:textColor="@color/white"
+        android:fontFamily="@font/sfpromedium"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageView"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/avatar"
+        app:civ_border_color="#ccbfe9"
+        app:civ_border_width="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/profileinfo"
+        android:layout_width="wrap_content"
+        android:fontFamily="@font/sfprobold"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Profile Info"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Please set your name and an optional profile image."
+        android:fontFamily="@font/sfproregular"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/profileinfo"
+        app:layout_constraintStart_toStartOf="@+id/profileinfo"
+        app:layout_constraintTop_toBottomOf="@+id/profileinfo" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="#3f196f"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/createusername"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/textfieldbackground"
+                android:ems="10"
+                android:fontFamily="@font/sfpromedium"
+                android:gravity="center"
+                android:hint="Type your username"
+                android:minHeight="48dp"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/createemail"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/textfieldbackground"
+                android:ems="10"
+                android:fontFamily="@font/sfpromedium"
+                android:gravity="center"
+                android:hint="Type your email"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/createpassword"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/textfieldbackground"
+                android:ems="10"
+                android:fontFamily="@font/sfpromedium"
+                android:gravity="center"
+                android:hint="Type your password"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:padding="10dp" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/showpasssetip"
+                android:layout_width="130dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/sfproregular"
+                android:gravity="center"
+                android:text="Show Password"
+                android:textColor="#fff"
+                app:buttonTint="#fff"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.604" />
+
+            <TextView
+
+                android:id="@+id/favsport"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/sfpromedium"
+                android:text="Select your favourite sports"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/sports"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:foregroundGravity="center"
+                app:chipSpacing="10dp"
+                app:chipSpacingVertical="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/favsport"
+                app:layout_constraintVertical_bias="0.342"
+                app:selectionRequired="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/football"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Football"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="#ffffff"
+                    app:chipBackgroundColor="#c4afe5"
+                android:textSize="18sp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/cricket"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Cricket"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    app:chipBackgroundColor="#c4afe5" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/basketball"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Basketball"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    app:chipBackgroundColor="#c4afe5" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/hockey"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Hockey"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    app:chipBackgroundColor="#c4afe5" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/tennis"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Tennis"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    app:chipBackgroundColor="#c4afe5" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/volleyball"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Volleyball"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    app:chipBackgroundColor="#c4afe5" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/baseball"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="Baseball"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    app:chipBackgroundColor="#c4afe5" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/golf"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Golf"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    app:chipBackgroundColor="#c4afe5" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/rugby"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="Rugby"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    app:chipBackgroundColor="#c4afe5" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/transbtn"
+                android:id="@+id/createsubmit"
+                android:textColor="@color/white"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/sfprobold"
+                android:text="Setup Profile" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

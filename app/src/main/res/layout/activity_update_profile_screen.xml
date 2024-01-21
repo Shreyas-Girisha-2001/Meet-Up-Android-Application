@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/background"
+    tools:context=".updateProfileScreen">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/uimageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/avatar"
+        app:civ_border_color="#ccbfe9"
+        app:civ_border_width="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/profileinfo"
+        android:layout_width="wrap_content"
+        android:fontFamily="@font/sfproheavyfont"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Update Profile"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/uimageView"
+        app:layout_constraintStart_toStartOf="@+id/uimageView"
+        app:layout_constraintTop_toBottomOf="@+id/uimageView" />
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:fontFamily="@font/sfproregular"
+        android:gravity="center"
+        android:padding="7dp"
+        android:text="You can update the password and intrest below . Tap on Profile Image to change profile image"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/profileinfo"
+        app:layout_constraintStart_toStartOf="@+id/profileinfo"
+        app:layout_constraintTop_toBottomOf="@+id/profileinfo" />
+
+    <TextView
+        android:id="@+id/sportsintrests"
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/sfprobold"
+        android:text="Your present sports intrests are : "
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/profileinfo"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="@+id/profileinfo"
+        app:layout_constraintTop_toBottomOf="@+id/profileinfo" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="#3f196f"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/ufavsport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/sfpromedium"
+                android:text="Select your favourite sports :"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/usports"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:foregroundGravity="center"
+                app:chipSpacing="10dp"
+                app:chipSpacingVertical="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/favsport"
+                app:layout_constraintVertical_bias="0.342"
+                app:selectionRequired="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/ufootball"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="Football"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    app:chipBackgroundColor="#c4afe5" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/ucricket"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Cricket"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    app:chipBackgroundColor="#c4afe5" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/ubasketball"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Basketball"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    app:chipBackgroundColor="#c4afe5" />
+                />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/uhockey"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="Hockey"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    app:chipBackgroundColor="#c4afe5" />
+                />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/utennis"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Tennis"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    app:chipBackgroundColor="#c4afe5" />
+                />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/uvolleyball"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Volleyball"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    app:chipBackgroundColor="#c4afe5" />
+                />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/ubaseball"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="Baseball"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    app:chipBackgroundColor="#c4afe5" />
+                />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/ugolf"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Golf"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    app:chipBackgroundColor="#c4afe5" />
+                />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/urugby"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="Rugby"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    app:chipBackgroundColor="#c4afe5" />
+                />
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/updatesubmit"
+                android:layout_width="200dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/transbtn"
+                android:fontFamily="@font/sfprobold"
+                android:text="Update Profile"
+                android:textColor="#ffffff" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/resetpass"
+                android:layout_width="200dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+
+                android:background="@drawable/transbtn"
+                android:fontFamily="@font/sfprobold"
+                android:text="Reset Password"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:background="#c4afe5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/menu" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

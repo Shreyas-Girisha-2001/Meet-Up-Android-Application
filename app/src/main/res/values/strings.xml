@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Meet Up</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="hintemail">Enter your email</string>
+    <string name="hintpassword">Enter your password</string>
+    <string name="submit">Submit</string>
+    <string name="username">Enter your username</string>
+    <string name="forgotpassword">forgot your password ? click here !</string>
+    <string name="register">Don\'t have a account ? click here to sign up !</string>
+</resources>
