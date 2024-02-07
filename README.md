@@ -17,8 +17,5 @@ Let’s assume you like Football or Cricket so much and you can find some unknow
 2. Install the required libraries and meet the requirements
 3. Run From file app/src/main/java/com/example/meet_up_application/SplashScreen.java on Android Studio.
 
-## Conclusions
-Under the direction of [Exposys Data Labs](https://www.linkedin.com/company/upchat-technologies/), this project was completed. This project was completed as part of an internship.
-
-1. Open a new issue if you have any questions about the project.
-2. Please open a PR if you have a fix for any of the bugs, and I'll be delighted.
+## Final Thoughts
+Under the direction of [Exposys Data Labs](https://www.linkedin.com/company/upchat-technologies/), this project was completed. This project was completed as part of an internship. Please open a PR if you have a fix for any of the bugs or upgrades, and I'll be delighted to include it after validation.
